@@ -1,0 +1,47 @@
+
+
+.loginPage {
+    background: url('Images/office.jpg');
+    background: linear-gradient(rgba(11, 11, 11, 0.5), rgba(10, 10, 10, 0.5)), url("Images/office.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+}
+
+.loginForm {
+    background-color: #fff;
+    color: #000;
+}
+
+ul li :hover {
+    background-color: gray;
+}
+
+.employee_image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.emp_det_image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    inset: 1;
+}
+.emp_det_card{
+    margin-bottom: 20px;
+}
+.emp_det > div{
+    box-shadow: 0px 0px 0px 5px #eee;
+    width: fit-content;
+    padding: 20px;
+}
+.emp_det{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
