@@ -194,10 +194,10 @@ const EmployeeCharts = () => {
                         </div>
                         <div className='row align-items-center'>
                             <div className='col-md-6' style={{ marginTop: '60px' }}>
-                                <canvas id="salaryDistributionChart" width="200" height="200" style={{boxShadow: "0px 0px 2px 2px #ccc", backgroundColor: '#fff'}}></canvas>
+                                <canvas id="salaryDistributionChart" width="200" height="200" className='bg-white shadow-lg'></canvas>
                             </div>
                             <div className='col-md-6' style={{ marginTop: '60px' }}>
-                                <canvas id="ageDistributionChart" width="200" height="200" style={{boxShadow: "0px 0px 2px 2px #ccc", backgroundColor: '#fff'}}></canvas>
+                                <canvas id="ageDistributionChart" width="200" height="200" className='bg-white shadow-lg'></canvas>
                             </div>
                         </div>
                         {/* <div className='row align-items-center'>

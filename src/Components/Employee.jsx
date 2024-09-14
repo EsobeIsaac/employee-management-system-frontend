@@ -104,7 +104,7 @@ const [nameSearch, seNameSearch] = useState(" ")
         }
       
 
-      <div className="container my-4 p-4 bg-dark" style={{boxShadow: "5px 5px 0px 2px #eee"}}>
+      <div className="container my-4 p-4 shadow-sm" style={{backgroundColor: '#222222'}}>
         <form id="employeeSearchForm" className="row g-2">
           
           <div className="col-md-6">
@@ -153,14 +153,13 @@ const [nameSearch, seNameSearch] = useState(" ")
       </div>
 
       <div className="mt-3">
-        <h3 className="mt-3">Employee List</h3>
         <div className="row">
         {employee[0] ? employee.map((e) => {
             if(nameSearch == " " || e.name.toLowerCase().indexOf(nameSearch.toLowerCase()) !== -1) {
               console.log(categorySearch == " ")
               if(!categorySearch || e.category_name === categorySearch) {
-                return <div className="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
-                    <div className="position-relative shadow p-1 bg-white">
+                return <div className="col-12 col-sm-6 col-md-4 col-lg-4 py-2 px-1 employeeCard">
+                    <div className="position-relative shadow-lg bg-white">
                       <div className="position-relative">
                         <img
                           src={e.image}
@@ -168,29 +167,31 @@ const [nameSearch, seNameSearch] = useState(" ")
                           alt="Employee"
                           style={{ height: '150px', width: '100%', objectFit: 'cover', inset: 1 }}
                         />
-                        <h2 className="fs-4 position-absolute bottom-0 w-100 text-white p-2" style={{backgroundColor: "rgba(0,0,0,0.8)"}}>{e.name}</h2>
                       </div>
-                      <a href={`mailto:${e.email}`} className="fs-2 position-absolute top-0 end-0 bg-white "><i className="fs-4 bi-envelope ms-2"></i>
+                      <a href={`mailto:${e.email}`} className=" position-absolute top-0 end-0 bg-white p-2"><i className="fs-4 bi-envelope me-1"></i>
                         </a>
-                      <div className="mt-2 p-2">
+                      <div className="mt-2 p-3">
+                        <h2 style={{margin: 0, fontSize:'20px'}}>{e.name}</h2>
                         
-                        <p className="mb-1"><b>Department:</b> {e.category_name}</p>
+                        <p className="my-1"><b>Department:</b> {e.category_name}</p>
                         <p className="mb-1"><i className="bi bi-geo-alt"></i> {e.address}</p>
                         <p className="mb-2" style={{width:"fit-content", marginLeft: "auto", color: "#013220"}}>&#8358;{e.salary}</p>
                         <button
-                          className="btn btn-info btn-sm me-2"
+                          className="btn btn-sm me-2"
+                          style={{border:'1px solid #222222'}}
                           onClick={()=>{
                             setToEditID(e.id)
                           }}
                         >
-                          Edit
+                          <i class="fa fa-pencil-square" aria-hidden="true"></i>
                         </button>
                         
                         <button
-                          className="btn btn-warning btn-sm"
+                          className="btn btn-sm"
+                          style={{border:'1px solid #8B0000', color: '#8B0000'}}
                           onClick={() => handleDelete(e.id)}
                         >
-                          Delete
+                          <i class="fa fa-trash" aria-hidden="true"></i>
                         </button>
                       </div>
                       

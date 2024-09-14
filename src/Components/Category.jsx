@@ -17,11 +17,8 @@ const Category = () => {
         }).catch(err => console.log(err))
     }, [])
   return (
-    <div className='mt-3' style={{padding: "0px 3%"}}>
-        <div className='d-flex justify-content-center'>
-            <h3>Cetegory List</h3>
-        </div>
-        <Link to="/dashboard/add_category" className='btn btn-success'>Add Cetegory</Link>
+    <div className='mt-5' style={{padding: "0px 3%"}}>
+        <Link to="/dashboard/add_category" className='btn' style={{backgroundColor:'#222222', color: '#fff'}}>Add Cetegory</Link>
         <div className='mt-3'>
             <table className='table'>
                 <thead>

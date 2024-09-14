@@ -45,3 +45,33 @@ ul li :hover {
     justify-content: center;
     align-items: center;
 }
+
+.sideMenu {
+    width: 100vw;
+    position: fixed;
+    left: -100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 999;
+    background: transparent;
+    transition: left 0.3s linear;
+    /* background-color: darkslategray; */
+  }
+.contentSide{
+    min-height: 100vh;
+    margin-left: auto;
+    width: 100%;
+    left: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .contentSide{
+        min-height: 100vh;
+        width: calc(100% - 260px);
+    }
+
+    .sideMenu{
+        width: 260px;
+        left: 0
+    }
+}

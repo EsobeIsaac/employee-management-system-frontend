@@ -54,7 +54,7 @@ const Home = () => {
     <div>
       <div className="row">
         <div className="col-12 col-lg-4 col-md-6 p-4">
-          <div className='px-3 pt-2 pb-3 border shadow-sm '>
+          <div className='px-3 pt-2 pb-3 border shadow-md bg-white'>
             <div className='text-center pb-1'>
               <h4>Admin</h4>
             </div>
@@ -66,7 +66,7 @@ const Home = () => {
           </div>
         </div>
         <div className="col-12 col-lg-4 col-md-6 p-4">
-          <div className='px-3 pt-2 pb-3 border shadow-sm'>
+          <div className='px-3 pt-2 pb-3 border shadow-sm bg-white'>
             <div className='text-center pb-1'>
               <h4>Employee</h4>
             </div>
@@ -78,7 +78,7 @@ const Home = () => {
           </div>
         </div>
         <div className="col-12 col-lg-4 col-md-12 p-4">
-          <div className='px-3 pt-2 pb-3 border shadow-sm'>
+          <div className='px-3 pt-2 pb-3 border shadow-sm bg-white'>
             <div className='text-center pb-1'>
               <h4>Salary</h4>
             </div>
